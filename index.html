@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <title></title>
 </head>
+
 <body>
-<a href="wind-game" id="wg">Bilibili风叶穿行小游戏</a><br>
-<noscript>需要开启 JavaScript 才能浏览。</noscript>
-<script>
-    // window.addEventListener('load',()=>{
-    //     document.getElementById('wg').click()
-    // })
-    window.onbeforeunload = function (e) {
-    var e = e || window.event,
-        dialogText = '页面还未保存，确定要离开吗？';
-    // 兼容IE8和Firefox 4之前的版本
-    if (e) {
-        e.returnValue = dialogText;
-    };
-    // Chrome, Safari, Firefox 4+, Opera 12+ , IE 9+
-    return dialogText;
-};
-</script>
+    <a href="wind-game" id="wg">Bilibili风叶穿行小游戏</a><br>
+    <noscript>需要开启 JavaScript 才能浏览。</noscript>
+    <script>
+        // window.addEventListener('load',()=>{
+        //     document.getElementById('wg').click()
+        // })
+        // window.onbeforeunload = function (e) {
+        //     var e = e || window.event,
+        //         dialogText = '页面还未保存，确定要离开吗？';
+        //     // 兼容IE8和Firefox 4之前的版本
+        //     if (e) {
+        //         e.returnValue = dialogText;
+        //     };
+        //     // Chrome, Safari, Firefox 4+, Opera 12+ , IE 9+
+        //     return dialogText;
+        // };
+    </script>
 </body>
+
 </html>

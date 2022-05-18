@@ -1,4 +1,4 @@
-/*! For license information please see main.js.LICENSE.txt */
+﻿/*! For license information please see main.js.LICENSE.txt */
 (() => {
     var e, t, i, n, o, r, s = {
         9669: (e, t, i) => {
@@ -3851,10 +3851,10 @@
                     updateEndScore: async e => {
                         f.textContent = e.toString();
                         let t = 0;
-                        try {
+                        /*try {
                             t = (await fetch(`https://api.bilibili.com/x/web-frontend/score/score?score=${e}`, {credentials: "include"}).then((e => e.json()))).result?.pct || 0
                         } catch (e) {
-                        }
+                        }*/
                         if (t) {
                             const e = S(t, b), i = Math.floor(Math.random() * w[e].length);
                             o.r1 = `你超过了<span>${t}%</span><br/>的玩家！`, o.r2 = w[e][i]
@@ -4770,12 +4770,12 @@
                 if (u) return;
                 u = !0;
                 let i = window.__BiliUser__?.cache?.data?.isLogin ? window.__BiliUser__?.cache?.data : null;
-                if (!i) try {
-                    const e = await r().get("https://api.bilibili.com/x/web-interface/nav", {withCredentials: !0}).then((e => e.data?.data));
-                    e.isLogin && (i = e)
-                } catch (e) {
-                }
-                if (!i) return window.__BiliUser__?.quickLogin(), void (u = !1);
+                // if (!i) try {
+                //     const e = await r().get("https://api.bilibili.com/x/web-interface/nav", {withCredentials: !0}).then((e => e.data?.data));
+                //     e.isLogin && (i = e)
+                // } catch (e) {
+                // }
+                if (!i) alert('请在b站在线玩与分享') //return window.__BiliUser__?.quickLogin(), void (u = !1);
                 const o = 'bold 30px "FZLanTYJW","PingFang SC","Microsoft YaHei", sans-serif';
                 c || (d || (d = l()), await d);
                 const s = document.createElement("canvas");
