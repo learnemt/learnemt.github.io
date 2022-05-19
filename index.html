@@ -8,26 +8,28 @@
 
 <body>
     <a href="wind-game" id="wg">Bilibili风叶穿行小游戏</a><br>
-    <a href="" id="sp">扫雷</a>
+    <a href="sweep" id="sp">扫雷</a>
     <noscript>需要开启 JavaScript 才能浏览。</noscript>
     <script>
-        window.onclick = (e)=>{
-            const sp = location.href += 'sweep';
-            document.getElementById('sp').href = sp; 
-        }
-        // window.addEventListener('load',()=>{
-        //     document.getElementById('wg').click()
-        // })
-        // window.onbeforeunload = function (e) {
-        //     var e = e || window.event,
-        //         dialogText = '页面还未保存，确定要离开吗？';
-        //     // 兼容IE8和Firefox 4之前的版本
-        //     if (e) {
-        //         e.returnValue = dialogText;
-        //     };
-        //     // Chrome, Safari, Firefox 4+, Opera 12+ , IE 9+
-        //     return dialogText;
-        // };
+        /*
+    window.onclick = (e) => {
+        const sp = location.href += 'sweep';
+        document.getElementById('sp').href = sp;
+    }
+    window.addEventListener('load', () => {
+        document.getElementById('wg').click()
+    })
+    window.onbeforeunload = function (e) {
+        var e = e || window.event,
+            dialogText = '页面还未保存，确定要离开吗？';
+        // 兼容IE8和Firefox 4之前的版本
+        if (e) {
+            e.returnValue = dialogText;
+        };
+        // Chrome, Safari, Firefox 4+, Opera 12+ , IE 9+
+        return dialogText;
+    };
+*/
     </script>
 </body>
 
