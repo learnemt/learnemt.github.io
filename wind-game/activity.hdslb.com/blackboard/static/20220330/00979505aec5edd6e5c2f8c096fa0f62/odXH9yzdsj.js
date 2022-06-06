@@ -3547,7 +3547,16 @@
                                                 x: e.body.velocity.x,
                                                 y: 12
                                             }), e.groundJumpTime = s.XH.duration, x(e.position)
-                                        }, Climb: () => {
+                                        },
+                                        //1
+                                        Air: () => {
+                                            s.XH.luckyDuration = 999999;
+                                            o.Body.setVelocity(e.body, {
+                                                x: e.body.velocity.x,
+                                                y: 12
+                                            }), e.groundJumpTime = s.XH.duration, x(e.position)
+                                        }
+                                        , Climb: () => {
                                             e.lockStem && (t.luckies.find((t => t.stemBody === e.stem))?.triggerEnd(), e.lockStem = !1, e.body.collisionFilter.mask = 2), e.state.changeState("Air"), o.Body.setVelocity(e.body, {
                                                 x: e.body.velocity.x,
                                                 y: 12
@@ -4459,6 +4468,8 @@
                     })), this.state.addHook("blowing", "enter", (() => {
                         r.XH.bonusSpeed = -.12, l = .18 - (r.XH.baseSpeed + r.XH.bonusSpeed), this.position[0] < 300 && (l += (300 - this.position[0]) / r.XH.luckyDuration), this._33Sprite.changeAnimation("blow")
                     })), this.state.addHook("blowing", "update", (() => {
+                        //2
+                        r.XH.bonusSpeed = -.12, l = .18 - (r.XH.baseSpeed + r.XH.bonusSpeed), this.position[0] < 300 && (l += (300 - this.position[0]) / r.XH.luckyDuration)
                         s.Body.translate(this.leafBody, {x: l * n.HT.deltaT, y: 0})
                     })), this.state.addHook("leaving", "enter", (() => {
                         r.XH.bonusSpeed = 0, this.adjectiveLeaving ? this._33Sprite.changeAnimation("fly") : (this._33Sprite.changeAnimation("into_dizzy"), this.intoDizzyAt = r.XH.duration + this._33Sprite.animations.into_dizzy.duration)
